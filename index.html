@@ -12,7 +12,7 @@
 
     // Wait for Cordova to load
     //
-    document.addEventListener("deviceready", onDeviceReady, false);
+   document.addEventListener("deviceready", onDeviceReady, false);
 
     // Populate the database 
     //
@@ -32,10 +32,14 @@
     // Query the success callback
     //
     function querySuccess(tx, results) {
+		var resultDiv = $('#mydiv');
+		var data = undefined;
         var len = results.rows.length;
         console.log("DEMO table: " + len + " rows found.");
         for (var i=0; i<len; i++){
             console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+			var data = "Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data;
+			resultDiv.append(data + "<br>")
         }
     }
 
@@ -63,7 +67,8 @@
 </head>
 <body>	
     <h1>Example Apsoft Database</h1>
-    <p>Database 1b</p>
+    <p>Database 1c</p>
+	<div id="mydiv">x</div
   
 </body>
 </html>
