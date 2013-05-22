@@ -21,13 +21,13 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id        = "co.megaproyectos.apsoft"
     version   = "2.7.0">
-	<preference name="phonegap-version" value="2.7.0" />
+
 	<name>Apsoft</name>
 
 	<description>
-		Una App de gestión de Alumbrado Público
+		Una App gestión de Alumbrado Público
 	</description>
-	
+
 	<author href="http://www.megaproyectos.co" email="administrador@megaproyectos.co">
 		Megaproyectos S.A
 	</author>
