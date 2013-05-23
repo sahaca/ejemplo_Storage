@@ -19,18 +19,15 @@
     function populateDB(tx) {
         tx.executeSql('DROP TABLE IF EXISTS DEMO');
         tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data,tipo)');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "Grupo 01")');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Grupo 02")');
-		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (3, "Grupo 03")');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (4, "Grupo 04")');
-		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (5, "Grupo 05")');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (6, "Grupo 06")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "a")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "b")');
+		
     }
 	
 	 function populateDB2(tx) {
         
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (7, "Grupo 07")');
-        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (8, "Grupo 08")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (7, "c")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (8, "d")');
 		
     }
 
@@ -84,8 +81,8 @@
 </head>
 <body>	
     <h1>Example Apsoft Database</h1>
-    <p>Database 1d</p>
-	<div id="mydiv"></div>
+    <p>Database 1e</p>
+	<div id="mydiv">x</div>
 	<p><a href="index.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" onclick="boton1(); return false">INSERT</a></p>
   
 </body>
