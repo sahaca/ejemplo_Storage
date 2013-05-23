@@ -19,18 +19,18 @@
     function populateDB(tx) {
         tx.executeSql('DROP TABLE IF EXISTS DEMO');
         tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data,tipo)');
-        tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (1, "Grupo 01", "Contratista")');
-        tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (2, "Grupo 02", "Contratista")');
-		tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (3, "Grupo 03", "Contratista")');
-        tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (4, "Grupo 04", "Operario")');
-		tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (5, "Grupo 05", "Contratista")');
-        tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (6, "Grupo 06", "Operario")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "Grupo 01")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Grupo 02")');
+		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (3, "Grupo 03")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (4, "Grupo 04")');
+		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (5, "Grupo 05")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (6, "Grupo 06")');
     }
 	
 	 function populateDB2(tx) {
         
-        tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (7, "Grupo 07", "Contratista")');
-        tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (8, "Grupo 08", "Operario")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (7, "Grupo 07")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (8, "Grupo 08")');
 		
     }
 
@@ -49,7 +49,7 @@
         console.log("DEMO table Apsoft: " + len + " rows found.");
         for (var i=0; i<len; i++){
             console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-			var data = "Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data + " Tipo =  " + results.rows.item(i).tipo);
+			var data = "Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data );
 			resultDiv.append(data + "<br>")
         }
     }
