@@ -26,6 +26,13 @@
 		tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (5, "Grupo 05", "Contratista")');
         tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (6, "Grupo 06", "Operario")');
     }
+	
+	 function populateDB2(tx) {
+        
+        tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (7, "Grupo 07", "Contratista")');
+        tx.executeSql('INSERT INTO DEMO (id, data, tipo) VALUES (8, "Grupo 08", "Operario")');
+		
+    }
 
     // Query the database
     //
@@ -42,7 +49,7 @@
         console.log("DEMO table Apsoft: " + len + " rows found.");
         for (var i=0; i<len; i++){
             console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-			var data = "Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data;
+			var data = "Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data + " Tipo =  " + results.rows.item(i).tipo);
 			resultDiv.append(data + "<br>")
         }
     }
@@ -66,13 +73,20 @@
         var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
         db.transaction(populateDB, errorCB, successCB);
     }
+	
+	//llamado del buton
+	function boton1() {
+        var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        db.transaction(queryDB2, errorCB, successCB);
+    }
 
     </script>
 </head>
 <body>	
     <h1>Example Apsoft Database</h1>
-    <p>Database 1c</p>
-	<div id="mydiv">x</div
+    <p>Database 1d</p>
+	<div id="mydiv"></div>
+	<p><a href="index.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" onclick="boton1(); return false">INSERT</a></p>
   
 </body>
 </html>
